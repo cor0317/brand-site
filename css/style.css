@@ -1,0 +1,460 @@
+/*
+1. 타이포그래피
+메뉴,푸터 정보 15px
+타이틀(h1 표제)-36~38px
+섹션제목 32px
+본문 16px
+2.컬러: 메인 컬러 #00572D
+        (포인트 컬러)
+제목컬러: #222  
+본문컬러: #666
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4{
+    color: #222;
+}
+section{
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+section h2{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 32px;
+}
+p,a{
+    color: #666;
+    line-height: 2em;
+}
+html,body{
+    height: 100%;
+}
+body{
+font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
+}
+header h1 img{
+    width: 190px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    position: relative;
+    max-width: 1200px;
+    min-width: 768px;
+    margin: 0 auto;
+}
+#main-header{
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 99;
+  }
+  header h1 img{
+    width: 190px;
+  }
+  header h1{
+    position: absolute;
+    left: 0px; top: 15px;
+  }
+  header #main-menu{
+    position: absolute;
+    right: 0; top: 30px;
+    text-transform: uppercase;
+  }
+  #main-header {
+    background: rgba(0,0,0,0.3);
+    height: 80px;
+  }
+  header #main-menu ul li{
+    display: inline-block;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  header #main-menu ul li a{
+    font-size: 15px;
+    color: #fff;
+  }
+  header #main-menu ul li a:hover{
+    color: #000;
+  }
+
+/* 0.visual */
+#visual{
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    background-image:  url(../image/메인비주얼.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  #visual .container{
+    position: relative;
+    height: 100%;
+    /* border: 1px solid red; */
+    
+  }
+  #visual .container .main-title{
+    position: absolute;
+    /* border: 1px solid red; */
+    color: #fff;
+    /* 텍스트 중앙 배치 */
+    text-align: left;
+    left: 35%; top: 50%;
+    transform: translate(-70%, -50%);
+  }
+  #visual .main-title h2{
+    color: #00572D;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  #visual .main-title strong{
+    color: #00572D;
+    font-size: 70px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+  }
+  #visual .main-title p{
+    color: #666;
+    font-size: 20px;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+  }
+  #visual .main-title strong b{
+    color: rgb(190, 57, 57);
+    font-size: 80px;
+  }
+  
+/*1. section - LACOSTE (브랜드소개)*/
+#brand{
+margin-top: 120px
+}
+#brand .container{
+text-align: center;
+padding-left: 15%;
+padding-right: 15%;
+}
+/* 상품 */
+#product{
+    margin-top: 100px;
+}
+#product .container{
+    text-align: center;
+}
+#product .container .products{
+    width: 100%;
+}
+#product .container .products li{
+width: 32.33%;
+float: left;
+}
+#product h4{
+    font-size: 17px;
+    font-weight: bolder
+}
+#product h4{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#product .products a{
+    display: block;
+    /*border: 1px solid red*/
+}
+#product .container .products li{
+    margin-right: 1.5%;
+    
+    padding: 1em;
+}
+#product .container .products li:nth-child(3n){
+    margin-right:0;
+    margin-bottom: 80px;
+}
+#product .container .products li img{
+    transform: scale(1);
+    transition: 0.4s;
+}
+#product .container .products li:hover img{
+    transform: scale(1.09);
+}
+#product .products h4{
+    margin-top: 2em;
+    font-size: 17px;
+}
+#product .products .proce{
+    margin-top: 5em;
+}
+
+/*section - latest News*/
+#news{
+    margin-top: 100px;
+}
+#news .container{
+    text-align: center;
+}
+#news h4{
+    font-size: 28px;
+    line-height: 360px;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+#news .container ul.news-list li{
+    border: 1px solid #ddd;
+    width: 49.25%;
+    height: 360px;
+    margin-right: 1.5%;
+    float: left;
+}
+#news .container ul.news-list li:last-child{
+    margin-right: 0;
+}
+/* 배경이미지 가변 틀 */
+#news .container ul.news-list li:first-child{
+background: #666;
+background-image: url(../image/9.png)
+}
+#news .container ul.news-list li:last-child{
+    background: #666;
+    background-image: url(../image/10.png)
+}
+
+/*section - Shop(지점,판매처)*/
+#shop{
+    margin-top: 100px;
+    height: 500px;
+    /* 
+        가로 세로 16:9, 폭 1200이상의 이미지
+        1910x1080(HD) 권장
+    */
+    background-image: url(../image/12.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+#shop h2{
+    height: 0;
+    overflow: hidden;
+}
+#shop .container{
+    text-align: center;
+}
+.btn-nomal{
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 1);
+    font-size: 2em;
+    line-height: 0;
+    padding: 32px 64px;
+    color: #fff;
+}
+.btn-nomal:hover{
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: rgba(0 , 0, 0, 0.8);
+    background: rgba(255, 255, 255, 1);
+    transition: 0.4s;
+}
+#shop .container .btn-nomal{
+    margin-top: 160px;
+}
+
+/* section - instargram(SNS) */
+#sns{
+    margin-top: 100px;
+    text-align: center;
+}
+#sns ul li{
+    width: 20%;
+    float: left;
+}
+#sns ul li img{
+    width: 100%;
+}
+#sns ul li img:hover{
+    transform: scale(1.2)
+}
+
+/* footer */
+#main-footer{
+    text-align: center;
+    padding: 50px 0;
+    background: #efefef;
+    margin-top: 100px;
+}
+#main-footer .footer-logo{
+    
+}
+#main-footer .footer-logo a img{
+    width: 100px;
+}
+.footer-text{
+    font-size: 15px;
+}
+
+    /* sub01 CSS */
+#sub01 #product .container .products li:nth-child(3n){
+    margin-right:0;
+    margin-bottom: 80px;
+}
+/* 메인 상단 공통 마진 */
+#sub01 main, #buy main #sub06 main{
+    overflow: hidden;
+    margin-top: 80px;
+}
+#sub01 #main-header #sub06 #main-header{
+    background: rgba(0,0,0,0.4);
+    height: 80px;
+  }
+  #sub01   header #main-menu ul li a:hover{
+      color: #000;
+  }
+/* buy 구매하기 페이지 */
+#section-buy{
+    overflow: hidden;
+    margin-top: 100px
+}
+#buy #section-buy figure{
+    width: 50%;
+    float: left;
+    padding-top: 100px;
+    text-align: center;
+}
+#buy #section-buy .info-box{
+    width: 50%;
+    float: left;
+}
+
+/*제품가격*/
+#buy #section-buy .info .price{
+font-size: 20px;
+line-height: 2em;
+}
+/*배송비 정보*/
+#buy #section-buy .sub-price{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+#buy #section-buy .sub-price .title{
+    font-size: 15px;
+    margin-right: 5em;
+}
+#buy #section-buy .sub-price .price{
+    font-size: 15px;
+}
+/*수량입력*/
+#buy #section-buy .quantity{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#buy #section-buy .quantity .title{
+    display: block;
+    margin-bottom: 0.5em;
+}
+/* 수량버튼 UI */
+.btn-group{
+overflow: hidden;
+margin-bottom: 2em;
+}
+.btn-group button, .btn-group #naumber{
+    float: left;
+    padding: 10px;
+    width: 3em;
+}
+.btn-group #naumber{
+    padding-left: 13px;
+}
+.btn-buy{
+    padding: 14px 36px;
+    border: none;
+    background: #333;
+    color: #fff;
+    margin-right: 1em;
+}
+.btn-cart{
+    padding: 13px 20px;
+    border: 1px solid #333;
+    background: transparent;
+    color: #333;
+}
+.shop-caption{
+    margin-top: 2em;
+}
+/* shops 매장찾기 */
+#sub06 #shops{
+    overflow: hidden;
+    margin-top: 130px;
+}
+#sub06 #shops .container{
+    text-align: center;
+}
+#sub06 #shops .container p{
+    color: #00572D;
+    margin-bottom: 3em;
+}
+.btn_find{
+    background: transparent;
+    padding: 1em 3em;
+    border:  1.2px solid #00572D;
+    transition: 0.4s;
+}
+.btn_find:hover{
+    background: #00572D;
+    color: white;
+}
+#map{
+    margin-top: 4em;
+}
+
+/* 팝업창 */
+.popup-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 600px;
+}
+.popup{
+    position: absolute;
+    left: 500px;        
+    top: 80px;
+    width: 250px;
+    height: 267px;
+    background:#fff;
+    padding: 10px;
+    display: none;
+    z-index: 99;
+}
+.popup.show{
+    display: block;
+}
+.popup .box{
+    padding: 20px;
+    border: 2px solid #00572D;
+}
+.popup h2{
+    margin-bottom: 1em;
+}
+.popup p{
+    line-height: 1.4;
+    margin-bottom: 0.8em;
+}
+.popup strong{
+    font-size: 1.4em;
+    color: red;
+}
+.popup .footer{
+    color: #00572D;
+    font-weight: bold;
+
+    padding-top: 5px;
+    margin-top: 2.4em
+}
+.popup .bottom-close{
+    text-align: right;
+}
